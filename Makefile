@@ -47,7 +47,7 @@ QR.tcl: QR.st
 	@echo "##  Smalltalk -> Tcl  ##"
 	@echo "########################"
 	@echo
-	gst QR.st > QR.tcl
+	/usr/local/bin/gst QR.st > QR.tcl
 
 QR.unl: QR.tcl
 	@echo
@@ -97,8 +97,10 @@ QR.a68: QR.adb
 	@echo "##  Ada -> ALGOL68  ##"
 	@echo "######################"
 	@echo
+	brew link gnat
 	gnatmake QR.adb
 	./QR > QR.a68
+	brew unlink gnat
 
 QR.awk: QR.a68
 	@echo
@@ -165,7 +167,7 @@ QR.cob: QR.clj
 	@echo "##  Clojure -> Cobol  ##"
 	@echo "########################"
 	@echo
-	clojure QR.clj > QR.cob
+	clj QR.clj > QR.cob
 
 QR.coffee: QR.cob
 	@echo
@@ -182,7 +184,7 @@ QR.lisp: QR.coffee
 	@echo "##  CoffeeScript -> CommonLisp  ##"
 	@echo "##################################"
 	@echo
-	coffee QR.coffee > QR.lisp
+	/usr/local/share/npm/bin/coffee QR.coffee > QR.lisp
 
 QR.fs: QR.lisp
 	@echo
@@ -295,7 +297,7 @@ QR.lua: QR.logo
 	@echo "##  Logo -> Lua  ##"
 	@echo "###################"
 	@echo
-	ucblogo QR.logo > QR.lua
+	logo QR.logo > QR.lua
 
 QR.makefile: QR.lua
 	@echo
@@ -328,7 +330,7 @@ QR.m: QR.js
 	@echo "##  NodeJS -> Objective-C  ##"
 	@echo "#############################"
 	@echo
-	nodejs QR.js > QR.m
+	node QR.js > QR.m
 
 QR.ml: QR.m
 	@echo
