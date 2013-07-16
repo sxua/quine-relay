@@ -24,7 +24,7 @@ apts = "apt-get install #{ apts.uniq.sort * " " }".gsub(/.{,70}( |\z)/) do
 end
 
 cmds = cmds.zip(exts.drop(1) + [".rb"]).map do |cmd, ext|
-  cmd.gsub("OUTFILE", "QR" + ext).gsub(/mv QR\.c(\.bak)? QR\.c(\.bak)? &&/, "")
+  cmd.gsub("OUTFILE", "QR" + ext).gsub(/mv QR\.c(\.bak)? QR\.c(\.bak)? && /, "")
 end
 cmds[-1].gsub!("QR.rb", "QR2.rb")
 
@@ -41,7 +41,7 @@ This is a <%= langs[0] %> program that generates
 <%= langs[2] %> program that generates
 ...(through <%= langs.size %> languages)...
 <%= langs[-1] %> program that generates
-the original Ruby code again.
+the original <%= langs[0] %> code again.
 
 ![Language Uroboros][langs]
 
@@ -72,6 +72,11 @@ You will see that `QR.rb` is the same as `QR2.rb`.
 Alternatively, just type `make`.
 
     $ make
+
+Note: It may require huge memory to compile some files.
+According to some reports, 2 GB memory is not enough.
+I believe that it will work on 4 GB memory, though it depends on a platform.
+Please enable swap if you have no enough memory.
 
 ### Tested interpreter/compiler versions
 
