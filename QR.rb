@@ -1,54 +1,54 @@
-eval$s=%q(eval(%w(B=92.chr;N=10.chr;n=0;e=->(s){s.gsub(/[#{B+B+N}"]/){B+(N==$&??n:$&)}};E=->(s){'("'+e[s]+'")'}
-;d=->(s,t=?"){s.gsub(t){t+t}};D=->(s,t=?@){s.gsub(B){t}};Q=->(s,t=?$){s.gsub(t){B+$&}};puts(eval(%q("objectXQRX
-extendsXApp{Hln#{E[%((displayX"#{e[%(HfX% sX"#{Q[  e["Trans  criptXshow:X'#{d[%(putsX[regsubX-allX{.}X"#{Q[e[%[
-intXK(){sJXs=#{E[%(withXAda.Text _Io;p   roce     dure      XQRXisXbeginXAda.Text_Io.Put_Line("#{d[%(BEGINXH("#
-{d[%(BEGIN{s=#{E[D[%(forXbXinX  Sys     t                            em.Text.ASCIIEncoding().GetBytes(#{Q[E["#i
-nclude<stdio.h>`nintXK (){pu    t                                   s#{E["#include<iostream>`nintXK(){std::cout
-<<#{E[%(classXProgram  {pu                                                    blicXstaticXvoidXMain(){System.Co
-nsole.Write(#{E[D[%(    (                                                    defnXf[lXr](if(>(countXr)45)(lazy-
-seq(cons(str"XXXX^"                                                                 "r"^"&")(fXl"")))(let[c(fir
-stXl)](ifXc(f(next                                                                 Xl)(if(=XcX^")(strXrXcXc)(st
-rXrXc)))[(str"XXX                                                                       X^""r"^".")]))))(doall(
-mapX#(Hln(str"XX                                                                       XXXXXX"%1))(lazy-cat["ID
-ENTIFICATIONXD                                    IVISION."                                "PROGRAM-ID.XQR.""PR
-OCEDUREXDIVI                              SION."]#{%(s=#{E[%(packag                       eXK;import("fmt";"sJs
-");funcXK()                           {fmt.Print("H^x27"+sJs.Replace("#{                   e[D[e[%(importXData.
-Char`nK=p                         utStrLn$"procedureXK();write(^"DO,1<-#"++                  show(lengthXs)++fX
-sX1X0;f(                        x:t)iXc=letXv=foldl(^aXx->a*2+(modXxX2))0$take                X8$iterate(flipXd
-ivX2)$D                       ata.Char.ordXxXin(ifXmodXiX4<1then"PLEASE"else"")+               +"DO,1SUB#"++sho
-wXi++"                      <-#"++show(mod(c-v)256)++"^^n"++fXt(i+1)v;f[]_X_="PLE               ASEREADOUT,1^^n
-PLEAS                      EGIVEUP^");end";s=#{E[%(.classXpublicXQR`n.superXjava/la              ng/Object`n.me
-thod                     XpublicXstaticXK([Lj ava/lang/SJ;)V`n.limitXstackX2`ngetsta             ticXjava/lang/
-Syst                    em/outXLjava/io/Prin   tStream;`nldcX"#{e[%(classXQR{publicXst            aticXvoidXK(S
-J[]                    v){SJXc[]=newXSJ[800  0  ],y="",z=y,s="#{z=t=(0..r=q=126).map{|n            |[n,[]]};a=[
-];%                   (@s=internalXconstan  t[#  {i=(s=%(PRINTX"#{Q["H"+E[%(all:`n`t@Hf            X%sX"#{e[%(.
-ass       em         blyXt{}.methodXstati  cXvoi  dXMain(){.entrypointXldstr"#{e["varXu=            require('ut
-il'                 );u.H('#import<stdio  .h>^n')  ;u.H(#{E[D[%(intXK(){puts#{E["H_sJ"+E[           "Hf"+E[%(sa
-y"#{               e["progr                                     amXQR(output);beginX#{([*           %($_="#{s=%
-(<?ph        pXe  cho"#{Q[e[  "intXK(  ){write#{E["q  r:-writ  e('#{Q[e["H"+E["cat"+E[%(ev          al$s=%q(#$s
-)).gsu       b(/.+/){"sayX`"#  {d[$&  ]}`""}]]],?']}'  ),nl,  halt."]};returnX0;}"]]}"?>);          (s+N*(-s.si
-ze%6)).by   tes.map{|n|"%07b"%  n}.  join.scan(/.{6}/)  .ma  p{|n|n=n.to_i(2);((n/26*6+n+1          9)%83+46).c
-hr}*""}";s|.|$n =ord$&;substrXu  n  pack(B8,chr$n-($n<5  8  ?-6:$n<91?65:71)),2|eg;s/.{7}/          0$&/g;HXpac
-kXB.length,$_). scan(%r(([X.0-9A   -Za-z]+)|(.))).revers   e.map{|a,b|(b)?"s//chrX#{b.ord}          /e":"s//#{a
-}/"},"eval"]*"X xX").scan(/.{1,  2  55}/).map{|s|"write  (  '#{s}');"}*""}end."]}"`n     e          nd`n)]]]};r
-eturnX0;})]]}.r  eplace(/@/g,S  J.f  romCharCode(92)))  "]}  "callXvoidX[               m          s  corlib]Sy
-stem.Console::Wr iteLine(sJ)r  et})]  }")],/[X^`t;"()  {}`[`  ]]/]}`nB                  Y          E   )).size+
-1}XxXi8]c"#{s.gs  ub(/[^`n"]  /){B+"%  02`x58"%$&.or  d}}^00"  declareXi32@pu          t          s     (i8*)de
-fineXi32@K(){star t:%0=call                                     Xi32@puts(i8           *          X      getele
-mentptrXinbounds(  [#{i}XxXi8]*@s,i32X0,  i32X0))  retXi32X0}).bytes{|n|r,z= z[n]||(a <          <       r;q<56
-24&&z[n]=[q+=1,[]]  ;t[n])};a<<r;t=[*43..  123]-  [64,*92..96];a.map{|n|t[n/75].chr+ t          [         n%75]
-.chr}*""}";intXi,n,  q=0,t;for(n=0;++n<126  ;)c  [n]=""+(char)n;for(i=0;++i<s.length(          )          ;){t=
-s.charAt(i);q=q*75+t  -t/64-t/92*5-43;if(i%  2  >0){y=q<n?c[q]:y;c[n++]=z+=y.charAt(          0           );Sys
-tem.out.H(z=c[q]);q=0   ;}}}})]}"`ninvokevir   tualXjava/io/PrintStream/Hln(Ljava/           l             ang/
-SJ;)V`nreturn`n.endXme   thod)+N]})]]]}^x27^n ","@","^^",-1))})]};u="XXXXXXXX";g=           (              l)->
-l.replaceX/[^^"]/g,(x)-    >"^^"+x`nf=(l)->console.logX"(write-lineX^""+g(l)+"^           ")"`ne=          (l)-
->fX".^^^""+u+g(l)+"^"Xcr"    `nd=(l)->eX"WRITE(*,*)'"+u+l+"'"`ndX"programXQR"           ;dX"HX^"(          &";i
-=0`ndX"&A,&"whileXi++<s.le      ngth`ndX"&A)^",&";i=0`ndX"&char("+s.charCo            deAt(i++)+"),&"whil  eXi<
-s.length`ndX"&^"^"";dX"endXp       rogramXQR";eX"STOP";eX"END";fX"bye")             .gsub(/.+/){%((cons"DI  SPL
-AY"(f"#{e[$&]}""")))}}["STOPXRU        N."])))),?~]]}.Replace("~","               ^^"));}})]};}"]};returnX  0;}
-"]]}):HXjoin(['+'forXiXinXrange(0             ,b)],"")+".>"                    ),?!]]};gsub(/!/,"^^",s);HXs})]}
-")END)]}");endXQR;)]};intXi,j;H("modu                                       leXQR;initialXbeginX");for(i=0;i<s.
-length;i++){H("$write(^"XXX");for(j=6;j>=                              0;j--)H((s[i]>>j)%2>0?"^^t":"X");H("^^n^
-^t^^nXX^`");");}H("$display(^"^^n^^n^");endXendm                odule");returnX0;}].reverse],/[`[`]$]/]}"X^x60.
-&];putsX"k"),?']}';cr"]]}")]}"))]}}").gsub(/[HJK^`X]/){[:print,0,:tring,:main,B*2,0,B,32.chr][$&.ord%9]})))*"")
+eval$s=%q(eval(%w(B=92.chr;N=?\n;n=0;e=->(s){s.gsub(/[#{B+B+N}"]/){B+(N==$&??n:$&)}};E=->(s){'("'+e[s]+'")'};d=
+->(s,t=?"){s.gsub(t){t+t}};D=->(s,t=?@){s.tr(B,t)};Q=->(s,t=?$){s.gsub(t){B+$&}};puts(eval(%q("objectXQRXextend
+sXApp{Hln#{E[%((displayX"#{e[%(HfX%sX"#{Q [e["Tra  nscriptX  show:X'#{d[%(putsX[regsubX-allX{.}X"#{Q[e[%[intXK(
+){sJXs=#{E[%(withXAda.Text_Io;pr ocedu   reXq     rXis      XbeginXAda.Text_Io.Put_Line("#{d[%(BEGINXH("#{d[%(B
+EGIN{s=#{E[D[%(forXbXinXSystem  .Te     x                            t.ASCIIEncoding().GetBytes(#{Q[E["#include
+<stdio.h>`nintXK(){put s#{E[    "                                   #include<iostream>`nintXK(){std::cout<<#{E[
+%(classXProgram{publi  cXs                                                    taticXvoidXMain(){System.Console.
+Write(#{E[D[%((defnX    f                                                    [lXr](if(>(countXr)45)(lazy-seq(co
+ns(str"XXXX^""r"^"&                                                                 ")(fXl"")))(let[c(firstXl)]
+(ifXc(f(nextXl)(if                                                                 (=XcX^")(strXrXcXc)(strXrXc)
+))[(str"XXXX^""r"                                                                       ^".")]))))(doall(mapX#(
+Hln(str"XXXXXXXX                                                                       "%1))(lazy-cat["IDENTIFI
+CATIONXDIVISIO                                    N.""PROGR                                AM-ID.XQR.""PROCEDUR
+EXDIVISION."                              ]#{("console.log"+E[%((wr                       ite-line"#{Q[%(X:XAX.
+"XXXXXXXXX"                           X;X:XBXAX."XWRITE(*,*)'"XAX;X:XCXB                   XTYPEX."X'"XCRX;X:XD
+XS"Xprogr                         amXQR"XCXS^"XHX^"(&"XCXS^"X#{e[%(packageX                  K;import("fmt";"sJ
+s");func                        XK(){fmt.Print("H^x27"+sJs.Replace("#{e[D[e[%(                importXData.Char`
+nK=putS                       trLn$"procedureXK();write(^"DO,1<-#"++show(lengthX               s)++fXsX1X0;f(x:
+t)iXc=                      letXv=foldl(^aXx->a*2+(modXxX2))0$takeX8$iterate(flip               XdivX2)$Data.Ch
+ar.or                      dXxXin(ifXmodXiX4<1then"PLEASE"else"")++"DO,1SUB#"++show              Xi++"<-#"++sho
+w(mo                     d(c-v)256)++"^^n"++f Xt(i+1)v;f[]_X_="PLEASEREADOUT,1^^nPLE             ASEGIVEUP^");e
+nd";                    s=#{E[%(.classXpubli   cXQR`n.superXjava/lang/Object`n.methodX            publicXstatic
+XK(                    [Ljava/lang/SJ;)V`n.  l  imitXstackX2`ngetstaticXjava/lang/Syste            m/outXLjava/
+io/                   PrintStream;`nldcX"#  {e[  %(classXQR{publicXstaticXvoidXK(SJ[]v)            {SJXc[]=newX
+SJ[       80         00],y="",z=y,s="#{z=  t=(0.  .r=q=126).map{|n|[n,[]]};a=[];%(@s=int            ernalXconst
+ant                 [#{i=(s=%(PRINTX"#{Q  ["H"+E[  %(all:`n`t@HfX%sX"#{e[%(.assemblyXt{}.           methodXstat
+icXv               oidXMain                                     (){.entrypointXldstr"#{e[           "varXu=requ
+ire('        uti  l');u.H('#  import<  stdio.h>^n');  u.H(#{E  [D[%(intXK(){puts#{E["H_sJ"          +E["Hf"+E[%
+(say"#       {e["programXQR(o  utput  );beginX#{([*%(  $_="#  {s=%(<?phpXecho"#{Q[e["intXK          (){write#{E
+["qr:-wri   te('#{Q[e["H"+E["c  at"  +E[%(eval$s=%q(#$  s))  .gsub(/.+/){"sayX`"#{d[$&]}`"          "}]]],?']}'
+),nl,halt."]};r eturnX0;}"]]}"?  >  );(s+N*(-s.size%6))  .  bytes.map{|n|"%07b"%n}.join.sc          an(/.{6}/).
+map{|n|n=n.to_i (2);((n/26*6+n+1   9)%83+46).chr}*""}";s   |.|$n=ord$&;substrXunpack(B8,ch          r$n-($n<58?
+-6:$n<91?65:71) ),2|eg;s/.{7}/0  $  &/g;HXpackXB.length  ,  $_).scan(%r(([X.0-9A-Za-     z          ]+)|(.))).r
+everse.map{|a,b  |(b)?"s//chrX  #{b  .ord}/e":"s//#{a}  /"}  ,"eval"]*"Xx               X          "  ).scan(/.
+{1,255}/).map{|s |"write('#{s  }');"  }*""}end."]}"`n  end`n  )]]]};re                  t          u   rnX0;})]
+]}.replace(/@/g,  SJ.fromCha  rCode(9  2)))"]}"callX  voidX[m  scorlib]System          .          C     onsole:
+:WriteLine(sJ)ret })]}")],/                                     [X^`t;"(){}`           [          `      ]]/]}`
+nBYE)).size+1}XxX  i8]c"#{s.gsub(/[^`n"]  /){B+"%  02`x58"%$&.ord}}^00"decla reXi32@p u          t       s(i8*)
+defineXi32@K(){sta  rt:%0=callXi32@puts(i  8*Xge  telementptrXinbounds([#{i}XxXi8]*@ s          ,         i32X0
+,i32X0))retXi32X0})  .bytes{|n|r,z=z[n]||(  a<<  r;q<5624&&z[n]=[q+=1,[]];t[n])};a<<r          ;          t=[*4
+3..123]-[64,*92..96]  ;a.map{|n|t[n/75].chr  +  t[n%75].chr}*""}";intXi,n,q=0,t;for(          n           =0;++
+n<126;)c[n]=""+(char)   n;for(i=0;++i<s.leng   th();){t=s.charAt(i);q=q*75+t-t/64-           t             /92*
+5-43;if(i%2>0){y=q<n?c   [q]:y;c[n++]=z+=y.ch arAt(0);System.out.H(z=c[q]);q=0;}}           }              })]}
+"`ninvokevirtualXjava/i    o/PrintStream/Hln(Ljava/lang/SJ;)V`nreturn`n.endXmet           hod)+N]          })]]
+]}^x27^n","@","^^",-1))})    ]}"XDUPXFORXS"X&A,&"XCXNE`x58TXS^"X&A)^",&"XCX0X           DOXBX."X&          char
+("XCOUNTX.X."X),&'"XCRXLOO      PXS^"X&^"^""XCXS"XendXprogramXQR"XCXAX."XS            TOP"XCRXAX."XEND"XC  RXBY
+EX;XDX),/([^"])/]}"))]).gsub       (/.+/){%((cons"DISPLAY"(f"#{e[$&]}""             ")))}}["STOPXRUN."])))  ),?
+~]]}.Replace("~","^^"));}})]};}        "]};returnX0;}"]]}):HXjoin([               '+'forXiXinXrange(0,b)],  "")
++".>"),?!]]};gsub(/!/,"^^",s);HXs             })]}")END)]}"                    );endXqr;)]};intXi,j;H("moduleXQ
+R;initialXbeginX");for(i=0;i<s.length                                       ;i++){H("$write(^"XXX");for(j=6;j>=
+0;j--)H((s[i]>>j)%2>0?"^^t":"X");H("^^n^^                              t^^nXX^`");");}H("$display(^"^^n^^n^");e
+ndXendmodule");returnX0;}].reverse],/[`[`]$]/]}"                X^x60.&]k),?']}';cr"]]}")]}"))]}}").gsub(/[HJK^
+`X]/){[:print,0,:tring,:main,B*2,0,B,?\s][$&.ord%9]})))*"")#_buffer_for_future_bug_fixes_#_buffer_for_future_bu
 ###################  Quine Relay -- Copyright (c) 2013 Yusuke Endoh (@mametter), @hirekoke  ##################)

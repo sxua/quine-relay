@@ -1,8 +1,10 @@
 require "rake/clean"
 
 CLEAN.include("../QR.*")
+CLEAN.include("../qr.*")
 CLEAN.include("../QR$*")
 CLEAN.include("../QR")
+CLEAN.include("../qr")
 CLEAN.include("../QR2.rb")
 CLEAN.include("../README.md")
 CLEAN.include("../langs.png")
@@ -18,7 +20,7 @@ file "../README.md" => ["README.md.gen.rb", "code-gen.rb"] do |t|
   ruby "README.md.gen.rb"
 end
 
-file "../langs.png" => ["langs.png.gen.rb", "code-gen.rb"] do |t|
+file "../langs.png" => ["langs.png.gen.rb", "uroboros.svg", "code-gen.rb"] do |t|
   ruby "langs.png.gen.rb"
 end
 

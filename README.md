@@ -78,8 +78,8 @@ And after that you can install the rest via Homebrew:
       boo clojure open-cobol clisp gforth gfortran go ghc icon intercal octave \
       jasmin llvm lua ocaml parrot pike swi-prolog python r regina-rexx
 
-If you are not using Ubuntu, please find your way yourself.
-If you could do it, please let me know.  Good luck.
+If you are not using OS X Mountain Lion, please find your way yourself.
+You may find [instructions for Arch Linux and other platforms in the wiki](https://github.com/mame/quine-relay/wiki/Installation).
 
 #### 2. Run each program on each interpreter/compiler.
 
@@ -92,8 +92,8 @@ If you could do it, please let me know.  Good luck.
     $ ruby unlambda.rb QR.unl > QR.vala
     $ valac QR.vala && ./QR > QR.v
     $ iverilog -o QR QR.v && ./QR -vcd-none > QR.ws
-    $ ruby whitespace.rb QR.ws > QR.adb
-    $ gnatmake QR.adb && ./QR > QR.a68
+    $ ruby whitespace.rb QR.ws > qr.adb
+    $ gnatmake qr.adb && ./qr > QR.a68
     $ a68g QR.a68 > QR.awk
     $ awk -f QR.awk > QR.boo
     $ booi QR.boo > QR.bf
@@ -112,7 +112,7 @@ If you could do it, please let me know.  Good luck.
     $ groovy QR.groovy > QR.hs
     $ runghc QR.hs > QR.icn
     $ icont -s QR.icn && ./QR > QR.i
-    $ ick -b QR.i &&  ./QR > QR.j
+    $ ick -b QR.i && ./QR > QR.j
     $ jasmin QR.j && java QR > QR.java
     $ javac QR.java && java QR > QR.ll
     $ llvm-as QR.ll && lli QR.bc > QR.logo
@@ -143,9 +143,6 @@ Alternatively, just type `make`.
     $ make
 
 Note: It may require huge memory to compile some files.
-According to some reports, 2 GB memory is not enough.
-I believe that it will work on 4 GB memory, though it depends on a platform.
-Please enable swap if you have not enough memory.
 
 ### Tested interpreter/compiler versions
 
@@ -160,49 +157,49 @@ Shell        |-           |3.2
 Smalltalk    |gnu-smalltalk  |3.2.5
 Tcl          |-         |8.5
 Unlambda     |(none)         |-
-Vala         |valac          |0.20.1
-Verilog      |icarus-verilog       |0.9.6
-Whitespace   |-         |-
-Ada          |gnat           |2012
-ALGOL68      |algol68g       |2.6
-Awk          |-           |4.1.0
-Boo          |boo            |0.9.4.9
-Brainfuck    |beef           |1.0.0
-C            |-            |4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-C++          |-            |4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-C#           |mono       |2.10.9
-Clojure      |clojure     |1.5.1
-Cobol        |open-cobol     |1.1
-CoffeeScript |coffee-script   |1.6.3
-CommonLisp   |clisp          |2.4.9
-Forth        |gforth         |0.7.0
-FORTRAN77    |gfortran       |4.8.1 (bottled)
-Fortran90    |gfortran       |4.8.1 (bottled)
-Go           |go         |1.1.1
-Groovy       |groovy         |2.1.5
-Haskell      |ghc            |7.6.3 (bottled)
-Icon         |icon          |9.5.0
-INTERCAL     |intercal       |0.29.pax
-Jasmin       |jasmin   |2.4
-Java         |-  |1.6.0_51
-LLVM asm     |llvm           |3.3 (bottled)
-Logo         |ucblogo        |6.0
-Lua          |lua         |5.1.5
-Makefile     |-           |3.81
-MSIL         |mono     |2.10.9
-NodeJS       |node         |0.10.13
-Objective-C  |-          |4.2 (clang-425.0.28) (based on LLVM 3.2svn)
-OCaml        |ocaml          |4.00.1 (bottled)
-Octave       |octave         |3.6.4
-Parrot asm   |parrot         |5.0.0
-Pascal       |fpc    |2.6.2
-Perl         |-           |5.12.4
-PHP          |-       |5.3.15
-Pike         |pike        |7.8.700
-Prolog       |swi-prolog     |6.2.6
-Python       |python         |2.7.5
-R            |R         |3.0.1
-REXX         |regina-rexx    |3.7
+Vala         |valac          |0.18.1-0ubuntu4
+Verilog      |iverilog       |0.9.6-1
+Whitespace   |(none)         |-
+Ada          |gnat           |4.6ubuntu1
+ALGOL68      |algol68g       |2.4.1-1
+Awk          |gawk           |1:4.0.1+dfsg-2ubuntu1
+Boo          |boo            |0.9.5~git20110729.r1.202a430-2
+Brainfuck    |beef           |0.0.6-2
+C            |gcc            |4:4.7.3-1ubuntu10
+C++          |g++            |4:4.7.3-1ubuntu10
+C#           |mono-mcs       |2.10.8.1-5ubuntu1
+Clojure      |clojure1.4     |1.4.0+dfsg-2ubuntu2
+Cobol        |open-cobol     |1.1-1
+CoffeeScript |coffeescript   |1.4.0-1
+CommonLisp   |clisp          |1:2.49-8.1ubuntu1
+Forth        |gforth         |0.7.0+ds2-0.1
+FORTRAN77    |f2c            |20100827-1
+Fortran90    |gfortran       |4:4.7.3-1ubuntu10
+Go           |golang         |2:1.0.2-2
+Groovy       |groovy         |2.0.0~beta2+isreally1.8.6-0ubuntu1
+Haskell      |ghc            |7.6.2-1ubuntu1
+Icon         |icont          |9.4.3-4
+INTERCAL     |intercal       |29:0.29-2
+Jasmin       |jasmin-sable   |2.4.0-1ubuntu1
+Java         |openjdk-6-jdk  |6b27-1.12.5-1ubuntu1
+LLVM asm     |llvm           |1:3.2-16~exp1
+Logo         |ucblogo        |5.5-2.1
+Lua          |lua5.2         |5.2.1-3
+Makefile     |make           |3.81-8.2ubuntu2
+MSIL         |mono-devel     |2.10.8.1-5ubuntu1
+NodeJS       |nodejs         |0.6.19~dfsg1-5ubuntu1
+Objective-C  |gobjc          |4:4.7.3-1ubuntu10
+OCaml        |ocaml          |3.12.1-2ubuntu3
+Octave       |octave         |3.6.4-1
+Parrot asm   |parrot         |4.6.0-1
+Pascal       |fp-compiler    |2.6.0-9
+Perl         |perl           |5.14.2-21
+PHP          |php5-cli       |5.4.9-4ubuntu2.2
+Pike         |pike7.8        |7.8.352-dfsg-7ubuntu1
+Prolog       |swi-prolog     |5.10.4-5ubuntu1
+Python       |python         |2.7.4-0ubuntu1
+R            |r-base         |2.15.2-1ubuntu1
+REXX         |regina-rexx    |3.6-2
 
 ### How to re-generate the source
 

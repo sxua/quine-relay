@@ -1,35 +1,43 @@
 require_relative "code-gen"
 
-s = '%(eval$s=%q(#$s))'
-CodeGen::List[0..-2].each {|c| s = c.gen_code(s).tr(" \\","X`") }
+s =
+CodeGen::List[0..-2].inject('%(eval$s=%q(#$s))') {|c, lang|
+  lang.gen_code(c).tr(" \\","X`")
+}
 
+s = s.gsub("print","H").gsub("tring","J").gsub("main","K").gsub("``","^")
+
+# lookup of escapes and common names
+# 'H' % 9 => 0 (print)
+# 'J' % 9 => 2 (tring)
+# 'K' % 9 => 3 (main)
+# '^' % 9 => 4 (2 * backslash)
+# '`' % 9 => 6 (backslash)
+# 'X' % 9 => 7 (space)
 code = <<-END.split.join
   eval$s=%q(eval(%w(
 
-  #{CodeGen::PROLOGUE}
-  puts(eval(%q(#{
-    s.gsub("print","H").gsub("tring","J").gsub("main","K").gsub("``","^")
-    # 'H' % 9 => 0
-    # 'J' % 9 => 2
-    # 'K' % 9 => 3
-    # '^' % 9 => 4
-    # '`' % 9 => 6
-    # 'X' % 9 => 7
-  }).gsub(/[HJK^`X]/){[:print,0,:tring,:main,B*2,0,B,32.chr][$&.ord%9]}))
+    #{CodeGen::PROLOGUE}
+    puts(eval(
+      %q(#{ s }).gsub(/[HJK^`X]/){[:print,0,:tring,:main,B*2,0,B,?\\s][$&.ord%9]}
+    ))
 
-  
   )*""))
 END
 
-$stderr.puts "size: #{ code.size }"
+$stderr.puts "size: #{ code.b.size }"
 
-Tmpl = File.read("uroboros.txt")
-width = Tmpl[/.*/].size
-
-code[-1, 0] =
+TEMPLATE = File.read("uroboros.txt")
+width = TEMPLATE[/.*/].size
+PADDING = "".ljust(width, "#_buffer_for_future_bug_fixes_")
+COPYRIGHT =
   "  Quine Relay -- Copyright (c) 2013 Yusuke Endoh (@mametter), @hirekoke  ".
   center(width, "#")[0..-2]
 
-code[-1, 0] = "#" * (Tmpl.count("#") - code.size)
-code = Tmpl.gsub(/#+/) { code.slice!(0, $&.size) }
-File.write("../QR.rb", code)
+code.chop!
+code = TEMPLATE.gsub(/#+/) { w = $&.size; code.slice!(0, w).ljust(w, PADDING) }.chomp
+code[-1] = ")"
+
+code[-1 - COPYRIGHT.size, COPYRIGHT.size] = COPYRIGHT
+
+File.write("../QR.rb", code + "\n")

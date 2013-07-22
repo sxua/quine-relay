@@ -1,5 +1,22 @@
 MAKEFLAGS += --no-print-directory
 
+BRAINFUCK=beef
+CLOJURE=clojure
+NODEJS=nodejs
+JASMIN=jasmin
+
+ifeq ($(shell [ -f /etc/arch-release ] && echo arch),arch)
+  BRAINFUCK=brainfuck
+  CLOJURE=clj
+  NODEJS=node
+  JASMIN=java -jar jasmin.jar
+endif
+
+ifeq ($(shell uname -s),Darwin)
+	CLOJURE=clj
+	NODEJS=node
+endif
+
 all: QR2.rb
 	@echo
 	@echo "#############"
@@ -83,23 +100,23 @@ QR.ws: QR.v
 	iverilog -o QR QR.v
 	./QR -vcd-none > QR.ws
 
-QR.adb: QR.ws
+qr.adb: QR.ws
 	@echo
 	@echo "#########################"
 	@echo "##  Whitespace -> Ada  ##"
 	@echo "#########################"
 	@echo
-	ruby whitespace.rb QR.ws > QR.adb
+	ruby whitespace.rb QR.ws > qr.adb
 
-QR.a68: QR.adb
+QR.a68: qr.adb
 	@echo
 	@echo "######################"
 	@echo "##  Ada -> ALGOL68  ##"
 	@echo "######################"
 	@echo
 	brew link gnat
-	gnatmake QR.adb
-	./QR > QR.a68
+	gnatmake qr.adb
+	./qr > QR.a68
 	brew unlink gnat
 
 QR.awk: QR.a68
@@ -132,7 +149,7 @@ QR.c: QR.bf
 	@echo "##  Brainfuck -> C  ##"
 	@echo "######################"
 	@echo
-	beef QR.bf > QR.c
+	$(BRAINFUCK) QR.bf > QR.c
 
 QR.cpp: QR.c
 	@echo
@@ -167,7 +184,7 @@ QR.cob: QR.clj
 	@echo "##  Clojure -> Cobol  ##"
 	@echo "########################"
 	@echo
-	clj QR.clj > QR.cob
+	$(CLOJURE) QR.clj > QR.cob
 
 QR.coffee: QR.cob
 	@echo
@@ -208,7 +225,10 @@ QR.f90: QR.f
 	@echo "##  FORTRAN77 -> Fortran90  ##"
 	@echo "##############################"
 	@echo
-	gfortran -o QR QR.f
+	mv QR.c QR.c.bak
+	f2c QR.f
+	tcc -o QR QR.c -L/usr/lib -lf2c
+	mv QR.c.bak QR.c
 	./QR > QR.f90
 
 QR.go: QR.f90
@@ -260,7 +280,7 @@ QR.j: QR.i
 	@echo "##########################"
 	@echo
 	mv QR.c QR.c.bak
-	ick -b QR.i
+	CC=tcc ick -b QR.i
 	mv QR.c.bak QR.c
 	./QR > QR.j
 
@@ -270,7 +290,7 @@ QR.java: QR.j
 	@echo "##  Jasmin -> Java  ##"
 	@echo "######################"
 	@echo
-	jasmin QR.j
+	$(JASMIN) QR.j
 	java QR > QR.java
 
 QR.ll: QR.java
@@ -330,7 +350,7 @@ QR.m: QR.js
 	@echo "##  NodeJS -> Objective-C  ##"
 	@echo "#############################"
 	@echo
-	node QR.js > QR.m
+	$(NODEJS) QR.js > QR.m
 
 QR.ml: QR.m
 	@echo
